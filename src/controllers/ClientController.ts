@@ -38,6 +38,10 @@ class ClientController{
 			response.status(400).send({ message: "Failed to insert" });
 		}
 	}
+
+	async update(request: Request, response: Response) {
+		response.json({ message: "update" });
+	}
 }
 
 
