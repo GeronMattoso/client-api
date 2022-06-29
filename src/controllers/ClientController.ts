@@ -63,7 +63,16 @@ class ClientController{
 	}
 
 	async remove(request: Request, response: Response) {
-		response.json({ message: "remove" });
+		const { id } = request.params;
+
+		try{
+			await prisma.client.delete({ where: { id } });
+	
+			response.status(200).json({ message: "Client removed" });
+		
+		} catch(error) {
+			response.status(404).json({ message: "Registry not found" });
+		}
 	}
 }
 
