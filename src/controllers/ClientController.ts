@@ -61,6 +61,10 @@ class ClientController{
 			response.status(404).json({ message: "Registry not found" });
 		}
 	}
+
+	async remove(request: Request, response: Response) {
+		response.json({ message: "remove" });
+	}
 }
 
 export const clientController = new ClientController();
