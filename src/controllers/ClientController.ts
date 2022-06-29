@@ -40,10 +40,27 @@ class ClientController{
 	}
 
 	async update(request: Request, response: Response) {
-		response.json({ message: "update" });
+		const { id } = request.params;
+		const { body } = request;
+	
+		if (clientSchema) {
+			const validation = clientSchema.validate(body, { abortEarly: false });
+
+			if (validation.error) {
+				return response.status(400).json({ message: validation.error.details});
+			}
+		}
+		try {
+			const registry = await prisma.client.update(
+				{
+					data: request.body,
+					where: { id }
+				});
+			response.json(registry);
+		} catch (error) {	  
+			response.status(404).json({ message: "Registry not found" });
+		}
 	}
 }
-
-
 
 export const clientController = new ClientController();
