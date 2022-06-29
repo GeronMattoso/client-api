@@ -14,7 +14,12 @@ class ClientController{
 			response: registries
 		});
 	}
+
+	async store(request: Request, response: Response) {
+		response.send({ message: "Insert" });
+	}
 }
+
 
 
 export const clientController = new ClientController();
