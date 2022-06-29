@@ -16,4 +16,6 @@
 * Prisma ORM
 * MySQL
 
+<h4 align="right">Developed by: Géron Mattoso.</h4>
+
 
