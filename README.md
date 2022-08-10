@@ -6,7 +6,7 @@
 ### Initialization:
  * Step 1: git clone https://github.com/GeronMattoso/client-api.git
  * Step 2: npm install
- * Step 3: npn run start:dev
+ * Step 3: npm run start:dev
 </br>
 
 ### Technologies: 
