@@ -1,6 +1,6 @@
 <h1 align="center">:car: Client Api Project :car:</h1>
 
-<h3 align="center">Clients management system. API to register, update, remove and list clients registries.BackEnd project proposed by Doutor Multas.</h3>
+<h3 align="center">Clients management system. API to register, update, remove and list clients registries. BackEnd project proposed by Doutor Multas.</h3>
 </br>
 
 ### Initialization:
